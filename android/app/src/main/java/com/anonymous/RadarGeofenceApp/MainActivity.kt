@@ -1,4 +1,4 @@
-package com.radargeofenceapp
+package com.anonymous.RadarGeofenceApp
 
 import android.os.Build
 import android.os.Bundle

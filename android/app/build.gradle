@@ -87,13 +87,13 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.radargeofenceapp"
+    namespace 'com.anonymous.RadarGeofenceApp'
     defaultConfig {
-        applicationId "com.radargeofenceapp"
+        applicationId 'com.anonymous.RadarGeofenceApp'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
 
         buildConfigField "String", "REACT_NATIVE_RELEASE_LEVEL", "\"${findProperty('reactNativeReleaseLevel') ?: 'stable'}\""
     }
@@ -153,6 +153,8 @@ android {
 }
 
 dependencies {
+
+    implementation "com.google.android.gms:play-services-location:21.0.1"
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
 

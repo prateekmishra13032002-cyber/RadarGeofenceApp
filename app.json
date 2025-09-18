@@ -2,6 +2,28 @@
   "expo": {
     "name": "RadarGeofenceApp",
     "slug": "RadarGeofenceApp",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "android": {
+      "package": "com.anonymous.RadarGeofenceApp",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION"
+      ]
+    },
+    "ios": {
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Allow app to use location for geofencing.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Allow app to use location in background for tracking."
+      }
+    },
+    "plugins": [
+      [
+        "react-native-radar",
+        {
+          "publishableKey": "prj_test_pk_c91b1261f51cbb972b484a618df4609e326452ef"
+        }
+      ]
+    ]
   }
 }
