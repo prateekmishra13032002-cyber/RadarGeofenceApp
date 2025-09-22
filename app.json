@@ -8,20 +8,29 @@
       "permissions": [
         "ACCESS_FINE_LOCATION",
         "ACCESS_COARSE_LOCATION",
-        "ACCESS_BACKGROUND_LOCATION"
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION",
+        "WAKE_LOCK"
       ]
     },
     "ios": {
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "Allow app to use location for geofencing.",
-        "NSLocationAlwaysAndWhenInUseUsageDescription": "Allow app to use location in background for tracking."
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Allow app to use location in the background for continuous tracking, even when the app is not in use or the device is locked.",
+        "NSMotionUsageDescription": "Allow app to use motion data for efficient tracking.",
+        "UIBackgroundModes": ["location", "fetch"]
       }
     },
     "plugins": [
       [
         "react-native-radar",
         {
-          "publishableKey": "prj_test_pk_c91b1261f51cbb972b484a618df4609e326452ef"
+          "publishableKey": "prj_test_pk_c91b1261f51cbb972b484a618df4609e326452ef",
+          "androidBackgroundPermission": true,
+          "androidFineLocationPermission": true,
+          "iosAlwaysPermission": true,
+          "iosBackgroundLocation": true
         }
       ]
     ]
